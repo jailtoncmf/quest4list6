@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <meta http-equiv=“Content-Type” content=“text/html; charset=iso-8859-1”>
+  <meta name="Jailton da Cruz Mocitaiba Filho, 200024655, bes017,  WEB" content="Atividades sobre JavaScript">
+  <script src="script.js"></script>
+  <title>JavaScript</title>
+
+  <script>
+    function mostraMedidas() {
+      var peso = document.form1.peso.value;
+      var altura = document.form1.altura.value;
+
+
+      imc = (peso / (altura * altura));
+
+      var classeIMC = "";
+      if (imc < 16.90) {
+        classeIMC = ", dessa forma você está Muito abaixo do peso";
+      } else if (imc < 18.40) {
+        classeIMC = ", dessa forma você está Abaixo do peso";
+      } else if (imc < 24.90) {
+        classeIMC = ", dessa forma você está com Peso normal";
+      } else if (imc < 29.90) {
+        classeIMC = ", dessa forma você está Acima do peso";
+      } else {
+        classeIMC = ", dessa forma você está  com Obesidade";
+      }
+
+      alert('Seu IMC é ' + imc + classeIMC);
+
+
+    }
+
+  </script>
+
+  <form name="form1">
+    Peso: <input type="number" name="peso" step="0.01"> </p>
+    Altura: <input type="number" name="altura" step="0.01"> </p>
+
+    <input type="submit" value="Enviar" onclick="mostraMedidas()">
+
+  </form>
+
+
+
+
+
+
+</html>
